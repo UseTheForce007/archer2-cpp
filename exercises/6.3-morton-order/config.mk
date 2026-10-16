@@ -1,2 +1,2 @@
-CXXFLAGS = -g --std=c++11 -I..
+CXXFLAGS = -g --std=c++20 -I..
 CC = $(CXX)

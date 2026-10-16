@@ -10,9 +10,14 @@ public:
   - A constructor using real and imaginary components
   */
 
+  Complex() = default;
+  Complex(double real);
+  Complex(double real, double imag);
+
   // Access components
   double real();
   /* Add declaration to access the imaginary component */
+  double imag();
 
   // Compute the complex conjugate
   Complex conj();
@@ -21,9 +26,13 @@ public:
   returns the magnitude of the complex number.
   */
 
+  double norm();
+
   /* Add declaration for an 'add' member function as so: z = i.add(j)
-  I.e. For complex numbers i and j, z is the result of i + j. 
+  I.e. For complex numbers i and j, z is the result of i + j.
   */
+
+  Complex add(Complex other_complex);
 
   // Check if two complex numbers are equal
   bool equals(Complex other_complex);
@@ -32,6 +41,10 @@ public:
   the complex number. These should have type 'double' and a suitable default
   value.
   */
+
+private:
+  double re = 0.0;
+  double im = 0.0;
 };
 
 #endif
